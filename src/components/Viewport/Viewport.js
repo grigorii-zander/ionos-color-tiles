@@ -2,6 +2,7 @@ import React, { useCallback, useEffect, useMemo, useReducer, useRef } from 'reac
 import { NodeController } from 'NodeController/NodeController'
 import styles from './Viewport.module.css'
 import { Node } from 'components/Node/Node'
+import { Button } from 'components/Button/Button'
 
 export const Viewport = () => {
   const viewportRef = useRef(null)
@@ -125,9 +126,9 @@ export const Viewport = () => {
   return (
     <div className={styles.root} ref={viewportRef}>
       <div className={styles.menuWrapper}>
-        <button onClick={populate}>Populate</button>
-        <button onClick={shake}>Shake</button>
-        <button onClick={dropNodes}>Drop Nodes</button>
+        <Button onClick={populate}>Populate</Button>
+        <Button onClick={shake}>Shake</Button>
+        <Button onClick={dropNodes}>Drop Nodes</Button>
       </div>
       {state.nodes.map(node => (
         <Node

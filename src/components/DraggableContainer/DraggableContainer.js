@@ -5,7 +5,6 @@ import { useDND } from 'hooks/useDND'
 
 export const DraggableContainer = ({ id, x = 0, y = 0, children, onDrop, onDrag, onDoubleClick }) => {
   const [appeared, setAppeared] = useState(false)
-
   const { setRef, node, dragging, hovered } = useDND(id, {
     coords: { x, y },
     onDrop: destination => {

@@ -1,0 +1,24 @@
+
+.root {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  border: 1px solid #037bff;
+  background-color: #037bff;
+  color: #fff;
+  border-radius: 8px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  outline: none;
+  height: 36px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-out;
+}
+
+.root:hover {
+  background-color: #008bff;
+}
