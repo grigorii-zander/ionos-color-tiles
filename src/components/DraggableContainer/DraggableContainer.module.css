@@ -1,0 +1,49 @@
+@keyframes appear {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  80% {
+    transform: scale(0.95);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.root {
+  position: absolute;
+  border: 3px solid white;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: move;
+  will-change: transform;
+  box-shadow: 0 3px 24px rgb(0 0 0 / 40%);
+  transition: transform 0.3s cubic-bezier(0.06, 0.975, 0.195, 0.985),
+    left 0.3s cubic-bezier(0.06, 0.975, 0.195, 0.985),
+    top 0.3s cubic-bezier(0.06, 0.975, 0.195, 0.985);
+
+}
+
+.root[data-dragging='true'] {
+  border-style: dashed;
+  pointer-events: none;
+  transition: initial;
+}
+
+.root[data-appearing='true'] {
+  animation: appear;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.06, 0.975, 0.195, 0.985);
+  animation-duration: 0.3s;
+}
+
+.root[data-hovered='true'] {
+  border-style: dashed;
+  border-color: red;
+  transform: scale(1.05);
+}
+
+
