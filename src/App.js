@@ -1,6 +1,6 @@
 import React from 'react'
-import { DNDProvider } from 'dndManager/dndManager'
 import { Viewport } from 'components/Viewport/Viewport'
+import { DNDProvider } from 'components/DNDProvider/DNDProvider'
 
 export const App = () => {
   return (
